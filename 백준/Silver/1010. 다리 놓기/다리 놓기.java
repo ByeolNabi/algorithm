@@ -5,8 +5,8 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main {
-	static int[][] dp;
 	static StringBuilder sb = new StringBuilder();
+	static int[][] dp = new int[32][32];
 
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -19,7 +19,7 @@ public class Main {
 			M = Integer.parseInt(st.nextToken());
 
 			// dp초기값
-			dp = new int[32][32];
+
 			for (int i = 0; i <= M; i++) {
 				dp[i][0] = 1;
 				dp[i][i] = 1;
