@@ -17,22 +17,23 @@ public class Main {
 		int N = Integer.parseInt(st.nextToken());
 		int M = Integer.parseInt(st.nextToken());
 
-		int[] numbs = new int[N];
+        int numb;
 		int[] sum = new int[N + 1];
 		st = new StringTokenizer(br.readLine());
 		sum[0] = 0;
 
 		for (int i = 0; i < N; i++) {
-			numbs[i] = Integer.parseInt(st.nextToken());
-			sum[i+1] += sum[i] + numbs[i];
+			numb = Integer.parseInt(st.nextToken());
+			sum[i+1] += sum[i] + numb;
 		}
 
 		for (int i = 0; i < M; i++) {
 			st = new StringTokenizer(br.readLine());
 			int a = Integer.parseInt(st.nextToken());
 			int b = Integer.parseInt(st.nextToken());
-			System.out.println(sum[b] - sum[a - 1]);
+			sb.append(sum[b] - sum[a - 1] + "\n");
 		}
 
+        System.out.println(sb);
 	}
 }
